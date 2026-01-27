@@ -30,7 +30,7 @@ export default function Portfolio() {
   const projects = [
     {
       name: "BizEduSante",
-      img: "/bes.png",
+      img: "/images/bes.png",
       link: "https://mafifame.github.io/bizedusante.com/",
       descriptionFR:
         "Interfaces créées pour un client du secteur de la santé dans le but d’améliorer ses services.",
@@ -40,7 +40,7 @@ export default function Portfolio() {
     },
     {
       name: "XXmaTECH",
-      img: "/xxma.png",
+      img: "/images/xxma.png",
       link: "https://mafifame.github.io/xxmatech.com/",
       descriptionFR:
         "Site web développé pour une entreprise en collaboration avec la Direction générale des impôts du Niger, puis transformé en template.",
@@ -50,7 +50,7 @@ export default function Portfolio() {
     },
     {
       name: "Wsite (en cours)",
-      img: "/wsite.png",
+      img: "/images/wsite.png",
       link: "#",
       descriptionFR:
         "Création d’un site web pour une entreprise du secteur de la restauration.",
@@ -80,7 +80,7 @@ export default function Portfolio() {
     <ul className="hidden md:flex gap-6 text-sm font-semibold">
       <li>
         <a
-          href="/CV-DETE-MARTINE.pdf"
+          href="/images/CV-DETE-MARTINE.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-pink-300"
@@ -221,7 +221,7 @@ export default function Portfolio() {
     {/* Image */}
     <div className="md:w-2/5 flex justify-center">
       <img
-        src="/profil.jpeg"
+        src="/images/profil.jpeg"
         alt="Profil"
         className="w-72 h-72 object-cover rounded-2xl shadow-lg"
       />
