@@ -26,11 +26,11 @@ export default function Portfolio() {
   },
 };
 
-
   const projects = [
     {
       name: "BizEduSante",
       img: "/images/bes.png",
+      img: `${import.meta.env.BASE_URL}images/bes.png`,
       link: "https://mafifame.github.io/bizedusante.com/",
       descriptionFR:
         "Interfaces créées pour un client du secteur de la santé dans le but d’améliorer ses services.",
@@ -41,6 +41,7 @@ export default function Portfolio() {
     {
       name: "XXmaTECH",
       img: "/images/xxma.png",
+      img: `${import.meta.env.BASE_URL}images/xxma.png`,
       link: "https://mafifame.github.io/xxmatech.com/",
       descriptionFR:
         "Site web développé pour une entreprise en collaboration avec la Direction générale des impôts du Niger, puis transformé en template.",
@@ -51,6 +52,7 @@ export default function Portfolio() {
     {
       name: "Wsite (en cours)",
       img: "/images/wsite.png",
+      img: `${import.meta.env.BASE_URL}images/wsite.png`,
       link: "#",
       descriptionFR:
         "Création d’un site web pour une entreprise du secteur de la restauration.",
@@ -81,6 +83,7 @@ export default function Portfolio() {
       <li>
         <a
           href="/images/CV-DETE-MARTINE.pdf"
+          href={`${import.meta.env.BASE_URL}images/CV-DETE-MARTINE.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-pink-300"
@@ -139,7 +142,7 @@ export default function Portfolio() {
       >
         <li>
           <a
-            href="/CV-DETE-MARTINE.pdf"
+            href={`${import.meta.env.BASE_URL}images/CV-DETE-MARTINE.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-pink-300"
@@ -222,6 +225,7 @@ export default function Portfolio() {
     <div className="md:w-2/5 flex justify-center">
       <img
         src="/images/profil.jpeg"
+        src={`${import.meta.env.BASE_URL}images/profil.jpeg`}
         alt="Profil"
         className="w-72 h-72 object-cover rounded-2xl shadow-lg"
       />
@@ -243,9 +247,9 @@ export default function Portfolio() {
           Développeuse front-end / Technicienne informatique
         </h3>
         <p className="text-sm text-gray-600 mt-1 mb-4">
-          <span className="font-semibold">Janvier 2022 à août 2025</span> – Multi Soft Sarl, Cotonou (Bénin)
+          <span className="font-semibold">Janvier 2022 à août 2025</span> – Multi Soft Sarl
         </p>
-        <ul className="list-disc list-inside text-sm leading-relaxed text-justify space-y-2">
+        <ul className="list-disc list-inside text-sm leading-relaxed space-y-2">
           <li>Réalisation d’interfaces web responsives de Wsite avec HTML5, CSS3, JavaScript, Bootstrap3</li>
           <li>Intégration de maquettes et collaboration back-end</li>
           <li>Assistance technique à distance et maintenance des MECeF avec support aux fournisseurs</li>
@@ -258,7 +262,7 @@ export default function Portfolio() {
         <p className="text-sm text-gray-600 mt-1 mb-4">
           <span className="font-semibold">Mai 2021 à septembre 2023</span> – ISAHIT SAS, St-Mandé (France)
         </p>
-        <ul className="list-disc list-inside text-sm leading-relaxed text-justify space-y-2">
+        <ul className="list-disc list-inside text-sm leading-relaxed space-y-2">
           <li>Annotation de contenus (textes, images, vidéos) et gestion du back-office</li>
           <li>Recherches stratégiques sur LinkedIn pour enrichissement et catégorisation de données</li>
         </ul>
@@ -268,9 +272,9 @@ export default function Portfolio() {
       <div className="bg-white/90 backdrop-blur p-8 rounded-2xl shadow-lg min-h-[260px]">
         <h3 className="text-xl font-bold mb-2">Consultante en développement web</h3>
         <p className="text-sm text-gray-600 mt-1 mb-4">
-          <span className="font-semibold">Septembre 2021 à décembre 2021</span> – Multi Soft Sarl, Cotonou (Bénin)
+          <span className="font-semibold">Septembre 2021 à décembre 2021</span> – Multi Soft Sarl
         </p>
-        <ul className="list-disc list-inside text-sm leading-relaxed text-justify space-y-2">
+        <ul className="list-disc list-inside text-sm leading-relaxed space-y-2">
           <li>Développement d’interfaces web responsives de XXmaTECH avec HTML5, CSS3, JavaScript et Bootstrap3</li>
           <li>Intégration de maquettes et d'API, collaboration back-end et participation aux revues de code</li>
         </ul>
@@ -280,9 +284,9 @@ export default function Portfolio() {
       <div className="bg-white/90 backdrop-blur p-8 rounded-2xl shadow-lg min-h-[260px]">
         <h3 className="text-xl font-bold mb-2">Stage professionnel</h3>
         <p className="text-sm text-gray-600 mt-1 mb-4">
-          <span className="font-semibold">Juillet 2020 à juillet 2021</span> – Multi Soft Sarl, Cotonou (Bénin)
+          <span className="font-semibold">Juillet 2020 à juillet 2021</span> – Multi Soft Sarl
         </p>
-        <ul className="list-disc list-inside text-sm leading-relaxed text-justify space-y-2">
+        <ul className="list-disc list-inside text-sm leading-relaxed space-y-2">
           <li>Création d’interfaces pour BizEduSante avec HTML5, CSS3, JavaScript</li>
           <li>Participation à la conception de la base de données sous PhpMyAdmin</li>
           <li>Gestion complète du parc informatique : installation, configuration et mise à jour des équipements et logiciels</li>
