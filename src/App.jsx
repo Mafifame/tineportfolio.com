@@ -138,7 +138,7 @@ export default function Portfolio() {
       <motion.ul
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        className="absolute top-16 left-0 w-full bg-black/70 backdrop-blur md:hidden flex flex-col gap-4 p-6 text-sm font-semibold"
+        className="absolute top-16 left-0 w-full bg-indigo-700 backdrop-blur md:hidden flex flex-col gap-4 p-6 text-sm font-semibold"
       >
         <li>
           <a
@@ -205,19 +205,20 @@ export default function Portfolio() {
   <div className="flex flex-col md:flex-row items-center gap-10">
     {/* Texte */}
     <div className="md:w-3/5">
-      <h2 className="text-3xl font-bold text-indigo-600 mb-10">
+      <h2 className="text-3xl font-bold text-indigo-600 mb-10 text-center">
          {content[lang].about}
       </h2>
       <p className="text-lg text-justify">
-        Passionnée par la création d’applications performantes
-        et centrées sur l’utilisateur, je suis développeuse Front-end
-        avec 4 ans d’expérience et j’ai choisi de me tourner vers un parcours fullstack. 
+        Très passionnée par la création d’applications performantes, fiables, intuitives
+        et véritablement centrées sur l’utilisateur, je suis développeuse Front-end
+        avec 4 ans d’expérience et j’ai choisi de me tourner vers un parcours fullstack 
+        afin d’élargir mes compétences techniques.
         Je crée des interfaces dynamiques et responsives tout en collaborant 
         étroitement avec les parties prenantes. J’accorde une grande importance au 
         travail en équipe, aussi bien avec les designers qu’avec les développeurs 
-        back-end. Curieuse, rigoureuse et très motivée, j’aime explorer de nouvelles 
-        technologies et évoluer dans des environnements où l’innovation, la collaboration 
-        et le partage de connaissances sont valorisés.
+        back-end. Dotée d'une grande capacité d'adaptabilité, curieuse, rigoureuse et très 
+        motivée, j’aime explorer de nouvelles technologies et évoluer dans des environnements 
+        où l’innovation, la collaboration et le partage de connaissances sont valorisés.
       </p>
     </div>
 
@@ -298,118 +299,85 @@ export default function Portfolio() {
 
 {/* Compétences */}
 <section id="skills" className="bg-white py-10">
-  <div className="max-w-5xl mx-auto px-8">
+  <div className="max-w-5xl mx-auto px-4 sm:px-8">
     <motion.h2
       whileInView={{ opacity: 1 }}
       initial={{ opacity: 0 }}
-      className="text-3xl font-bold text-pink-500 mb-6"
+      className="text-3xl font-bold text-pink-500 mb-12 text-center"
     >
-     {content[lang].skills}
+      {content[lang].skills}
     </motion.h2>
 
-    <div className="flex flex-col items-center gap-20">
-      {/* Ligne 1 : 6 logos */}
-      <div className="grid grid-cols-6 gap-20 place-items-center">
-        {[
-          "html5",
-          "css3",
-          "javascript",
-          "react",
-          "vuejs",
-          "bootstrap",
-        ].map((skill, index) => (
+    <div className="flex flex-col items-center gap-32">
+      {/* Ligne 1 */}
+      <div className="flex flex-wrap justify-center gap-16 md:gap-20 lg:gap-32">
+        {["html5", "css3", "javascript", "react", "vuejs"].map((skill) => (
           <motion.div
             key={skill}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.35,
-              delay: index * 0.06,
-              type: "spring",
-              stiffness: 120
-            }}
-            whileHover={{
-              rotate: 8,
-              scale: 1.2,
-              transition: { type: "spring", stiffness: 150 }
-            }}
-            className="flex flex-col items-center gap-1"
+            transition={{ duration: 0.35, type: "spring", stiffness: 120 }}
+            whileHover={{ rotate: 8, scale: 1.2, transition: { type: "spring", stiffness: 150 } }}
+            className="flex flex-col items-center gap-2 w-1/2 sm:w-1/2 md:w-auto"
           >
             <img
               src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill}/${skill}-original.svg`}
               alt={skill}
-              className="w-16 h-16"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
             />
-            <span className="text-sm font-medium capitalize">{skill}</span>
+            <span className="text-xs sm:text-sm font-medium capitalize text-center">{skill}</span>
           </motion.div>
         ))}
       </div>
 
-      {/* Ligne 2 : 4 logos */}
-      <div className="grid grid-cols-4 gap-20 place-items-center">
-        {[
-          "nodejs",
-          "python",
-          "mysql",
-          "tailwindcss",
-        ].map((skill, index) => (
+      {/* Ligne 2 */}
+      <div className="flex flex-wrap justify-center gap-16 md:gap-20 lg:gap-32">
+        {["bootstrap", "nodejs", "python", "mysql", "tailwindcss"].map((skill) => (
           <motion.div
             key={skill}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.35,
-              delay: (index + 6) * 0.06,
-              type: "spring",
-              stiffness: 120
-            }}
-            whileHover={{
-              rotate: 8,
-              scale: 1.2,
-              transition: { type: "spring", stiffness: 150 }
-            }}
-            className="flex flex-col items-center gap-1"
+            transition={{ duration: 0.35, type: "spring", stiffness: 120 }}
+            whileHover={{ rotate: 8, scale: 1.2, transition: { type: "spring", stiffness: 150 } }}
+            className="flex flex-col items-center gap-2 w-1/2 sm:w-1/2 md:w-auto"
           >
             <img
               src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill}/${skill}-original.svg`}
               alt={skill}
-              className="w-16 h-16"
+              className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
             />
-            <span className="text-sm font-medium capitalize">{skill}</span>
+            <span className="text-xs sm:text-sm font-medium capitalize text-center">{skill}</span>
           </motion.div>
         ))}
       </div>
 
-      {/* Ligne 3 : 3 logos */}
-      <div className="grid grid-cols-3 gap-20 place-items-center">
-        {[
-          "php",
-          "github",
-          "wordpress",
-        ].map((skill, index) => (
+      {/* Ligne 3 centrée */}
+      <div className="flex flex-wrap justify-center gap-16 md:gap-20 lg:gap-32">
+        {["php", "github", "wordpress", "responsive-web"].map((skill) => (
           <motion.div
             key={skill}
             initial={{ opacity: 0, scale: 0.5 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.35,
-              delay: (index + 10) * 0.06,
-              type: "spring",
-              stiffness: 120
-            }}
-            whileHover={{
-              rotate: 8,
-              scale: 1.2,
-              transition: { type: "spring", stiffness: 150 }
-            }}
-            className="flex flex-col items-center gap-1"
+            transition={{ duration: 0.35, type: "spring", stiffness: 120 }}
+            whileHover={{ rotate: 8, scale: 1.2, transition: { type: "spring", stiffness: 150 } }}
+            className="flex flex-col items-center gap-2 w-1/2 sm:w-1/2 md:w-auto"
           >
-            <img
-              src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill}/${skill}-original.svg`}
-              alt={skill}
-              className="w-16 h-16"
-            />
-            <span className="text-sm font-medium capitalize">{skill}</span>
+            {skill === "responsive-web" ? (
+              <img
+                src="images/responsive-web.svg"
+                alt="Responsive Web"
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+              />
+            ) : (
+              <img
+                src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill}/${skill}-original.svg`}
+                alt={skill}
+                className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16"
+              />
+            )}
+            <span className="text-xs sm:text-sm font-medium capitalize text-center">
+              {skill === "responsive-web" ? "Responsive Web" : skill}
+            </span>
           </motion.div>
         ))}
       </div>
@@ -423,7 +391,7 @@ export default function Portfolio() {
     <motion.h2
       whileInView={{ opacity: 1 }}
       initial={{ opacity: 0 }}
-      className="text-3xl font-bold text-pink-500 mb-6"
+      className="text-3xl font-bold text-pink-500 mb-6 text-center"
     >
       {content[lang].certifications}
     </motion.h2>
@@ -455,7 +423,7 @@ export default function Portfolio() {
 {/* Realisations */}
 <section id="projects" className="py-12 bg-gradient-to-r from-pink-50 to-indigo-50">
   <div className="max-w-5xl mx-auto px-8">
-    <motion.h2 whileInView={{ opacity: 1 }} initial={{ opacity: 0 }} className="text-3xl font-bold text-pink-500 mb-6">
+    <motion.h2 whileInView={{ opacity: 1 }} initial={{ opacity: 0 }} className="text-3xl font-bold text-pink-500 mb-6 text-center">
       {content[lang].projects}
     </motion.h2>
     <div className="grid md:grid-cols-3 gap-6">
