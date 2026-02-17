@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import './index.css';
 
-export default function Portfolio() {
+function Portfolio() {
   const [lang, setLang] = useState("fr");
   const [open, setOpen] = useState(false);
 
+  <div id="top"></div>
   const content = {
   fr: {
     title: "Développeuse Front-End",
@@ -28,6 +30,17 @@ export default function Portfolio() {
 
   const projects = [
     {
+      name: "Portfolio",
+      img: "/images/portfo.png",
+      img: `${import.meta.env.BASE_URL}images/portfo.png`,
+      link: "https://mafifame.github.io/tineportfolio.com/",
+      descriptionFR:
+        "Un aperçu clair et créatif de mes projets réalisés, reflétant mon savoir-faire et mon univers.",
+      descriptionEN:
+        "Web interface creation and database design contribution.",
+      tech: "Reactjs, HTML, CSS",
+    },
+    {
       name: "BizEduSante",
       img: "/images/bes.png",
       img: `${import.meta.env.BASE_URL}images/bes.png`,
@@ -50,10 +63,10 @@ export default function Portfolio() {
       tech: "HTML, CSS, JavaScript, Bootstrap",
     },
     {
-      name: "Wsite (en cours)",
+      name: "Wsite",
       img: "/images/wsite.png",
       img: `${import.meta.env.BASE_URL}images/wsite.png`,
-      link: "#",
+      link: "https://mafifame.github.io/wsite.com/",
       descriptionFR:
         "Création d’un site web pour une entreprise du secteur de la restauration.",
       descriptionEN:
@@ -273,7 +286,7 @@ export default function Portfolio() {
     </div>
   </section>
 
-  {/* Compétences */}
+  {/*Compétences */}
   <section id="skills" className="bg-white py-10">
     <div className="max-w-5xl mx-auto px-4 sm:px-8">
       <motion.h2
@@ -293,7 +306,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35, type: "spring", stiffness: 120 }}
               whileHover={{ rotate: 8, scale: 1.2, transition: { type: "spring", stiffness: 150 } }}
-              className="flex flex-col items-center gap-2 w-1/2 sm:w-1/2 md:w-auto"
+              className="flex flex-col items-center gap-2 w-1/4 sm:w-1/4 md:w-auto"
             >
               <img
                 src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill}/${skill}-original.svg`}
@@ -313,7 +326,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35, type: "spring", stiffness: 120 }}
               whileHover={{ rotate: 8, scale: 1.2, transition: { type: "spring", stiffness: 150 } }}
-              className="flex flex-col items-center gap-2 w-1/2 sm:w-1/2 md:w-auto"
+              className="flex flex-col items-center gap-2 w-1/4 sm:w-1/4 md:w-auto"
             >
               <img
                 src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${skill}/${skill}-original.svg`}
@@ -334,7 +347,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.35, type: "spring", stiffness: 120 }}
               whileHover={{ rotate: 8, scale: 1.2, transition: { type: "spring", stiffness: 150 } }}
-              className="flex flex-col items-center gap-2 w-1/2 sm:w-1/2 md:w-auto"
+              className="flex flex-col items-center gap-2 w-1/4 sm:w-1/4 md:w-auto"
             >
               {skill === "responsive-web" ? (
                 <img
@@ -400,7 +413,7 @@ export default function Portfolio() {
       <motion.h2 whileInView={{ opacity: 1 }} initial={{ opacity: 0 }} className="text-3xl font-bold text-pink-500 mb-6">
         {content[lang].projects}
       </motion.h2>
-      <div className="grid md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {projects.map((project) => (
           <motion.a
             href={project.link}
@@ -442,7 +455,6 @@ export default function Portfolio() {
           <span>linkedin.com/in/martine-dete</span>
         </p>
       </div>
-
       
       <div className="md:w-1/2 space-y-4 text-center">
         <p className="flex items-center justify-center gap-3">
@@ -461,6 +473,10 @@ export default function Portfolio() {
       <footer className="bg-indigo-700 text-white text-center p-4">
           © {new Date().getFullYear()} Martine DETE – Développeuse Front-End
       </footer>
+      <a href="#top" class="scroll-top">
+        <img src="images/toop.jpg" alt="Haut" />
+      </a>
       </div>
     );
   }
+  export default Portfolio;
