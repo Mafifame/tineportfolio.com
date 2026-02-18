@@ -467,12 +467,12 @@ function Portfolio() {
         </p>
       </div>
     </div>
+    <p className="flex items-center mt-6 justify-center gap-3">A la recherche d'un stage de 2 à 6 mois et d'une alternance pour la rentrer 2026-2027 en Développement web</p>
   </section>
 
   {/* Footer */}
       <footer className="bg-indigo-700 text-white text-center p-4">
-          © {new Date().getFullYear()} Martine DETE – Développeuse Front-End <br></br>
-          A la recherche d'un stage de 2 à 6 mois et d'une alternance pour la rentrer 2026-2027 en Développement web
+          © {new Date().getFullYear()} Martine DETE – Développeuse Front-End
 
       </footer>
       <a href="#top" class="scroll-top">
