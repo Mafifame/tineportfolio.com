@@ -78,7 +78,7 @@ function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-pink-50 text-gray-800">
       {/* Header */}
-      <header className="bg-gradient-to-r from-indigo-600 to-pink-500 text-white">
+      <header className="sticky top-0 z-50 bg-gradient-to-r from-indigo-600 to-pink-500 text-white">
         {/* Navigation */}
         <nav className="flex justify-between items-center px-8 py-4 bg-black/20 backdrop-blur">
           <h1 className="font-bold text-xl">Martine Fifame DETE</h1>
@@ -471,7 +471,9 @@ function Portfolio() {
 
   {/* Footer */}
       <footer className="bg-indigo-700 text-white text-center p-4">
-          © {new Date().getFullYear()} Martine DETE – Développeuse Front-End
+          © {new Date().getFullYear()} Martine DETE – Développeuse Front-End <br></br>
+          A la recherche d'un stage de 2 à 6 mois et d'une alternance pour la rentrer 2026-2027 en Développement web
+
       </footer>
       <a href="#top" class="scroll-top">
         <img src="images/toop.jpg" alt="Haut" />
