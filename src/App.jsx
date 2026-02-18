@@ -95,8 +95,8 @@ function Portfolio() {
           <ul className="hidden md:flex gap-6 text-sm font-semibold">
             <li>
               <a
-                href="/images/CV-DETE-MARTINE.pdf"
-                href={`${import.meta.env.BASE_URL}images/CV-DETE-MARTINE.pdf`}
+                href="/images/CV-DETE.pdf"
+                href={`${import.meta.env.BASE_URL}images/CV-DETE.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-pink-300"
@@ -145,7 +145,7 @@ function Portfolio() {
             >
               <li>
                 <a
-                  href={`${import.meta.env.BASE_URL}images/CV-DETE-MARTINE.pdf`}
+                  href={`${import.meta.env.BASE_URL}images/CV-DETE.pdf`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-pink-300"
